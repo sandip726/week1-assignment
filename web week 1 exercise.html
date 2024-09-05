@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="main-heading">Hello World</h1> 
+    <button id="my button">click me</button>
+
+    <ul id="my list"></ul>
+    <button id="add-data">Add item to list</button>
+
+    <textarea id="custom-text" placeholder="Enter custom text"></textarea>
+
+
+
+    <script>
+        document.getElementById("my button").addEventListener("click", function() {
+            console.log("Hello world");
+
+            document.getElementById("main-heading").textContent = "Moi maailma";
+        });
+
+        document.getElementById("add-data").addEventListener("click",function() {
+            const ul = document.getElementById("my list");
+            const text = document.getElementById("custom-text").value || "Default list item";
+
+            const li = document.createElement("li");
+            li.textContent = text;
+            ul.appendChild(li)
+        })
+    </script>
+</body>
+</html>
